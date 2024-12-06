@@ -1,6 +1,13 @@
+const dotenv = require('dotenv');
+
+dotenv.config();
 const express = require("express");
 const Post = require("./models/Post/Post");
+const connectDB = require("./utils/connectDB");
 
+
+//!call the db
+connectDB();
 const app = express();
 
 //! PORT
